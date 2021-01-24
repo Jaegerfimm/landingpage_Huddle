@@ -1,0 +1,65 @@
+@import "variables";
+html{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: $myWhite;
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+
+    div.root{
+        background-color: $myViolet;
+    }
+    div.content{
+        background-image: url("/images/bg-mobile.svg");
+
+        .footer{
+            a{
+                font-size: 2rem;
+                color: $myWhite;
+                border: 1px solid red;
+            }
+        }
+    }
+    div.div_Main{
+        box-sizing: border-box;
+        text-align: center;
+        
+        .illustration{
+            width: 100%;
+            height: auto;
+        }
+    }
+    div.div_Info{
+        box-sizing: border-box;
+
+        .p_Info{
+            font-size: 20px;
+            color: $myWhite;
+        }
+        .btn_Register{
+            padding: .70rem 5.5rem;
+            border-radius: 25px;
+            border: 0;
+            box-shadow: 4px 2px 7px rgba(0, 0, 0, 0.52);
+            color: $myViolet;
+            transition: .2s;
+        }
+        .btn_Register:hover{
+            color: $myWhite;
+            background-color: $myMagenta;
+        }
+    }
+    
+
+}
