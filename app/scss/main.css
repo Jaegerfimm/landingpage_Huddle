@@ -1,8 +1,15 @@
-html {
-  margin: 0;
-  padding: 0;
-  height: auto;
-  width: auto;
+* {
+  line-height: 1.7em;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+html a, html a:hover, html a::after, html a::before, html a:active {
+  text-decoration: none;
 }
 
 header h1 {
@@ -15,45 +22,49 @@ header h1 {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  overflow: hidden;
+  overflow: scroll;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body div.root {
+  background-image: url("/images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: #674baf;
 }
 
-body div.content {
-  background-image: url("/images/bg-mobile.svg");
+body div.root div.content {
+  padding: 2.5rem;
 }
 
-body div.content .footer a {
-  font-size: 2rem;
-  color: white;
-  border: 1px solid red;
+body div.root div.content header.headerLogo .logo {
+  width: 40%;
 }
 
-body div.div_Main {
+body div.root div.content div.div_Main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
 }
 
-body div.div_Main .illustration {
+body div.root div.content div.div_Main .illustration {
   width: 100%;
   height: auto;
+  margin: 3.3em 0px 3.5em 0px;
 }
 
-body div.div_Info {
+body div.root div.content div.div_Main div.div_Info {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body div.div_Info .p_Info {
+body div.root div.content div.div_Main div.div_Info .p_Info {
   font-size: 20px;
   color: white;
 }
 
-body div.div_Info .btn_Register {
+body div.root div.content div.div_Main div.div_Info .btn_Register {
   padding: .70rem 5.5rem;
   border-radius: 25px;
   border: 0;
@@ -64,8 +75,102 @@ body div.div_Info .btn_Register {
   transition: .2s;
 }
 
-body div.div_Info .btn_Register:hover {
+body div.root div.content div.div_Main div.div_Info .btn_Register:hover {
   color: white;
   background-color: #e882e8;
+}
+
+body div.root div.content .footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4em 0px 0px 0px;
+}
+
+body div.root div.content .footer a {
+  font-size: 1.2rem;
+  color: white;
+  border: 1px solid white;
+  padding: 4px 4px;
+  margin: 6px;
+  border-radius: 25px;
+}
+
+body div.root div.content .footer .fa-facebook-f {
+  padding: 4px 8px;
+}
+
+body div.root div.content .footer a:hover {
+  color: #e882e8;
+  border-color: #e882e8;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@media only screen and (min-width: 1440px) {
+  body div.root {
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #674baf;
+  }
+  body div.root div.content {
+    padding: 4em;
+  }
+  body div.root div.content header.headerLogo .logo {
+    width: 15%;
+  }
+  body div.root div.content div.div_Main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body div.root div.content div.div_Main .illustration {
+    width: 100%;
+    padding: auto;
+  }
+  body div.root div.content div.div_Main div.div_Info {
+    padding: 3em;
+    text-align: left;
+  }
+  body div.root div.content div.div_Main div.div_Info header.header h1 {
+    font-size: 40px;
+    line-height: 1.4em;
+  }
+  body div.root div.content div.div_Main div.div_Info .p_Info {
+    font-size: 18px;
+    line-height: 1.4em;
+    color: white;
+  }
+  body div.root div.content div.div_Main div.div_Info .btn_Register {
+    padding: .80rem 4rem;
+    font-size: 20px;
+  }
+  body div.root div.content .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
